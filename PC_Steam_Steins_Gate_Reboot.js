@@ -100,7 +100,7 @@ function attachSetText() {
     if (setText === null) return;
 
     Interceptor.attach(setText, {
-        onEnter: function (args) {
+        onEnter(args) {
             const param3 = args[2].toInt32();
             const isDialogue = param3 === 1 && args[3].toInt32() !== 0; // param4==0 means backlog replay, not a live line
 
@@ -136,16 +136,16 @@ function attachBoard() {
     if (getInt === null) return;
 
     Interceptor.attach(structGet, {
-        onEnter: function () { depth = depth + 1; idxOut = null; },
-        onLeave: function () { depth = depth - 1; }
+        onEnter() { depth = depth + 1; idxOut = null; },
+        onLeave() { depth = depth - 1; }
     });
 
     Interceptor.attach(getInt, {
-        onEnter: function () { if (depth > 0) idxOut = this.context.rdx; }
+        onEnter() { if (depth > 0) idxOut = this.context.rdx; }
     });
 
     Interceptor.attach(pushString, {
-        onEnter: function () {
+        onEnter() {
             if (depth === 0 || idxOut === null) return;
 
             let index, raw;
