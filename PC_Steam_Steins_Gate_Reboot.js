@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         STEINS;GATE RE:BOOT
-// @version      1.0.0.0
+// @version      1.0.0.0 (ManifestID: 4900984998756496132)
 // @author       Musi
 // @description  Steam
 // * MAGES. Inc.
