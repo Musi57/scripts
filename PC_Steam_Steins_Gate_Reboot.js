@@ -178,7 +178,5 @@ function attachBoard() {
     });
 }
 
-(function () {
-    attachSetText();
-    attachBoard();
-})();
+attachSetText();
+attachBoard();
