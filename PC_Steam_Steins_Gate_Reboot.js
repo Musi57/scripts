@@ -21,7 +21,7 @@ const setTextHook = {
 // the script draws the message board itself, so its posts never reach setText
 const structGetHook = {
     name: 'structGet',
-    pattern: '48 89 5c 24 08 48 89 6c 24 10 48 89 74 24 20 57 48 83 ec 50 0f 29 74 24 40 48 8b fa 48 8b e9 48 8b ca e8 49 9a ff ff 83 f8 02 75 5d 48 8d 4c 24 20 e8 1a f8 29 00 48 8d 4d 18 e8 51 6d 2a 00 83 e8 06',
+    pattern: '48 89 5c 24 08 48 89 6c 24 10 48 89 74 24 20 57 48 83 ec 50 0f 29 74 24 40 48 8b fa 48 8b e9 48 8b ca e8 ?? ?? ?? ?? 83 f8 02 75 ?? 48 8d 4c 24 20 e8 ?? ?? ?? ?? 48 8d 4d 18 e8 ?? ?? ?? ?? 83 e8 06',
 };
 
 const pushStringHook = {
